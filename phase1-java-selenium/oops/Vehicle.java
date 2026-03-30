@@ -1,11 +1,11 @@
-package OOps;
+
 
 public class Vehicle {
     void start() {
-        System.out.println("Vehicle starting.."); // add a default message
+        System.out.println("Vehicle starting..");
     }
     void stop() {
-        System.out.println("Vehicle stopping.."); // add a default message
+        System.out.println("Vehicle stopping..");
     }
 }
 
@@ -14,9 +14,8 @@ class Car extends Vehicle {
     void start() {
         System.out.println("Car starting - vroom!");
     }
-
     @Override
-    void stop() {                                  // override stop() too
+    void stop() {
         System.out.println("Car stopping - brake applied");
     }
 }
@@ -26,23 +25,19 @@ class Bike extends Vehicle {
     void start() {
         System.out.println("Bike starting - kick start!");
     }
-
     @Override
-    void stop() {                                  // override stop() too
+    void stop() {
         System.out.println("Bike stopping - brake applied");
     }
 }
 
-class Main {
+class Day1_Inheritance {
     public static void main(String[] args) {
-        Vehicle v1 = new Car();   // polymorphism - Vehicle reference
+        Vehicle v1 = new Car();
         Vehicle v2 = new Bike();
-
-        v1.start();   // prints: Car starting - vroom!
+        v1.start();
         v1.stop();
-
-        v2.start();   // prints: Bike starting - kick start!
+        v2.start();
         v2.stop();
     }
 }
-

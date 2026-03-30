@@ -1,4 +1,4 @@
-package OOps;
+
 
 public class Shape {
     void area() {
@@ -9,13 +9,13 @@ public class Shape {
 class Circle extends Shape {
     double radius;
 
-    Circle(double radius) {       // constructor takes radius as input
+    Circle(double radius) {
         this.radius = radius;
     }
 
     @Override
     void area() {
-        double a = Math.PI * radius * radius;   // Math.PI = 3.14159...
+        double a = Math.PI * radius * radius;
         System.out.println("Area of Circle is: " + a);
     }
 }
@@ -23,7 +23,7 @@ class Circle extends Shape {
 class Rectangle extends Shape {
     double length, breadth;
 
-    Rectangle(double length, double breadth) {  // constructor
+    Rectangle(double length, double breadth) {
         this.length = length;
         this.breadth = breadth;
     }
@@ -35,9 +35,9 @@ class Rectangle extends Shape {
     }
 }
 
-class ShapeMain {
+class Day1_Polymorphism {
     public static void main(String[] args) {
-        Shape s1 = new Circle(5);        // polymorphism
+        Shape s1 = new Circle(5);
         Shape s2 = new Rectangle(4, 6);
 
         s1.area();   // Area of Circle is: 78.53...
